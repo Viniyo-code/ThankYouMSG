@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gift</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glow 2s infinite alternate;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+
+        .heart-container {
+            margin-top: 30px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart-container img {
+            width: 150px;
+            height: auto;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            background-color: #000000;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff5722, 0 0 30px #ff5722;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff8a65, 0 0 40px #ff8a65;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .gift-section {
+            display: none;
+            margin-top: 50px;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+        }
+
+        .gift-section h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .gift-section img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gift-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Surprise Unlocked!</h1>
+    <p>You’ve unlocked not just this gift, but my heart too! 💖 Your surprise reminded me once again why I’m the luckiest person in the world. Enjoy your little surprise!"</p>
+
+    <div class="heart-container">
+        <img src="https://media.tenor.com/rMQEwcgdxZAAAAAM/twerk-ass.gif" alt="Heart">
+    </div>
+
+    <div class="button-container">
+        <button onclick="revealGift()">Reveal Gift</button>
+    </div>
+
+    <!-- Gift Section -->
+    <div id="gift-section" class="gift-section">
+        <h2>Here's Your Surprise Gift! 🎁</h2>
+        <img src="https://api.deepai.org/job-view-file/5462798b-8e9f-4cee-8e2b-62e003310619/outputs/output.jpg" alt="Gift Image">
+        <p>Happy 2nd Anniversary, my love! 💕</p>
+        <p>
+            You’ve brought so much light and love into my life, and today, I wanted to remind you of the ones who’ve shaped ours in their own special way. Your Percy was a part of your heart, and my MauMau is a part of ours now—just like they’re both pieces of our story.
+
+            This image is my way of saying that, just like your Percy and my MauMau, we create a bond that transcends time, filled with love, comfort, and care. I hope this small gesture reminds you of the love that surrounds us, always—past and present.
+
+            Here’s to celebrating our journey together, cherishing the moments, and dreaming of a future filled with even more joy. Thank you for being my anchor, my partner, and my home. I love you, always and forever. ❤️
+        </p>
+    </div>
+
+    <script>
+        function revealGift() {
+            const giftSection = document.getElementById("gift-section");
+            giftSection.style.display = "block";
+            giftSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
