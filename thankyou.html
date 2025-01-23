@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer the Question</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #76b852, #8dc26f);
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .gif-container img {
+            width: 290px;
+            animation: bounce 3s infinite;
+        }
+
+        .arrow-container {
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        .arrow-container img {
+            width: 230px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .input-container {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            font-size: 1.2rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 300px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        .error {
+            color: #f44336;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: Thank You Message -->
+    <section>
+        <h1>Thank You for the Surprise!</h1>
+        <p>Sometimes, I wonder what I did to deserve someone as amazing as you. Thank you for being you and for always making me smile. Today, my smile is because of your surprise! 🥰</p>
+        <div class="gif-container">
+            <img src="https://media1.tenor.com/m/CWIgzHidCxAAAAAC/cat-miffed-cute.gif" alt="Bowing GIF">
+        </div>
+        <div class="arrow-container" onclick="scrollToQuestion()">
+            <img src="https://media0.giphy.com/media/12HZukMBlutpoQ/200.gif?cid=6c09b952uslo3rknq2czmhdc5ynhhi58xxitffw7v9e2obms&ep=v1_gifs_search&rid=200.gif&ct=g" alt="⬇Click this Baby⬇">
+            <p>🖕🏻Give this Cat Fist Bump🖕🏻</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Question -->
+    <section id="question-section">
+        <h1>Now Let's Move On to Your Gift</h1>
+        <p>But first, answer this important question:</p>
+        <p><strong>What date did we first meet? (Format: DDMMYYYY)</strong></p>
+        <div class="input-container">
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <p class="error" id="error-message">Haww, Wrong Answer, Didn't accept this from you!</p>
+    </section>
+
+    <script>
+        function scrollToQuestion() {
+            document.getElementById('question-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            const errorMessage = document.getElementById('error-message');
+            if (answer === "23012023") { // Replace with your desired correct answer
+                window.location.href = "gift.html"; // Redirects to the next page
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        if (userAnswer === correctAnswer) {
+    window.location.href = "gift.html"; // Replace with the path to your new page
+} else {
+    alert("Wrong answer! Try again.");
+}
+
+    </script>
+</body>
+</html>
